@@ -1,0 +1,32 @@
+/*link the problem
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/sum-it-if-you-can-4867f851/description/*/
+import java.util.*;
+import java.io.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        // Write your code here\
+        Scanner s = new Scanner(System.in);
+        String number = s.nextLine();
+
+        if(number.length() == 10)
+        {
+           int itr = 10;
+           int sum = 0;
+           int n = Integer.parseInt(number);
+           for(;n>0;n/=10)
+           {
+               sum  = sum+ ((n%10)*itr);
+               --itr;
+           }
+           if(sum%11 == 0)
+                System.out.print("Legal ISBN");
+           else
+                System.out.print("Illegal ISBN");
+        }
+        else
+        {
+            System.out.print("Illegal ISBN");
+        }
+    }
+}
