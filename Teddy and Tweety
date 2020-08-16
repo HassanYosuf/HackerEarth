@@ -1,0 +1,17 @@
+/*link to thee problem
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/teddy-and-tweety/description/*/
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        
+
+        // Write your code here
+        Scanner s = new Scanner(System.in);
+         int n = s.nextInt();
+
+         if(n%3==0)
+         System.out.print("YES");
+         else
+         System.out.print("NO");
+    }
+}
