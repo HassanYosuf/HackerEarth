@@ -1,0 +1,22 @@
+/*Link to the problem
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/tds-and-his-breakup/description/
+*/
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        // Write your code here
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int x = s.nextInt();
+
+        while(n-->0)
+        {
+            int y = s.nextInt();
+            if(y >= x)
+            System.out.println("YES");
+            else
+            System.out.println("NO");            
+        }
+    }
+}
