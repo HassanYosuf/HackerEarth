@@ -1,0 +1,19 @@
+/*Link to the Poblem
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/back-to-school-1/description/*/
+import java.util.*;
+public class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        // Write your code here
+        Scanner s = new Scanner(System.in);
+        String[] in = s.nextLine().split(" ");
+        int max = Integer.MIN_VALUE;
+        for(int i =0;i<in.length;i++)
+        {
+            if(Integer.parseInt(in[i]) > max)
+            max = Integer.parseInt(in[i]);
+        }   
+        System.out.println(max);        
+    }
+}
+
