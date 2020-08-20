@@ -1,3 +1,5 @@
+/*Link to the probltm
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/divisibe-or-2d8e196a/description/*/
 import java.util.*;
 class TestClass {
     public static void main(String args[] ) throws Exception
@@ -14,21 +16,26 @@ class TestClass {
              a[i] = s.nextInt(); //Input
              if(i<(n/2))
              {
-                //  String str = (Integer.toString(a[i]));
-                //  char t = str.charAt(0);
-                //  int temp = Integer.parseInt(str);
-                 sum = (sum*10) + (rev(a[i])%10);
+                 if((i+1)%2==0)
+                 sum = sum+rev(a[i]);
+
+                 else
+                 sum = sum-rev(a[i]);      
              }
              else
              {
-                 sum = (sum*10) + (a[i] % 10);
+                 if((i+1)%2==0)
+                 sum = sum+(a[i]%10);
+
+                 else
+                 sum = sum-(a[i]%10);
              }
          }
-        //  System.out.println(sum);
          if(sum%11==0)
          System.out.println("OUI");
          else
          System.out.println("NON");
+         
       }catch(Exception e){}
     }
 
@@ -37,7 +44,7 @@ class TestClass {
         int r = 0;
         for(int i = n;i>0;i/=10)
         {
-            r = (r*10)+(i%10);
+            r = (i%10);
         }
         return r;
     }
