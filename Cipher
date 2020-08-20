@@ -1,0 +1,35 @@
+/*Linkto he Problem
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/cipher-1/description/*/
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        // Write your code here
+        Scanner s = new Scanner(System.in);
+        String n = s.nextLine();
+        int inc = s.nextInt();
+        String Str="";
+        for(int i=0;i<n.length();i++)
+        {
+            char ch = n.charAt(i);
+            
+            if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z')||Character.isDigit(ch)==true)
+            {
+                
+                for(int j=1;j<=inc;j++)
+                {
+                    ch++;
+                    
+                    if((int)ch==91)
+                    ch='A';
+                    else if((int)ch==123)
+                    ch='a';
+                    else if((int)ch==58)
+                    ch='0';           
+                }     
+            }
+            Str = Str + ch;
+        }
+        System.out.print(Str);
+    }
+}
