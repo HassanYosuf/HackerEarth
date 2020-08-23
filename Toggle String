@@ -1,0 +1,32 @@
+/*Link to the problrm
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/modify-the-string/description/*/
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        // Write your code here
+        
+        try
+        {
+            Scanner sc  =new Scanner(System.in);
+            String s= sc.nextLine();
+
+            String str = "";
+
+            for(int i=0;i<s.length();i++)
+            {
+                char ch = s.charAt(i);
+                if(Character.isUpperCase(ch)==true)
+                ch =Character.toLowerCase(ch);
+
+                else if(Character.isLowerCase(ch)==true)
+                ch = Character.toUpperCase(ch);
+
+                str = str + ch;
+
+            }
+            System.out.println(str);
+
+        }catch(Exception e){}
+    }
+}
