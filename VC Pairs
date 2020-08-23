@@ -1,0 +1,76 @@
+/*Link to the Problem
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/vc-pairs/description/*/
+import java.util.*;
+
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+       
+
+        // Write your code here
+      try{
+             Scanner s = new Scanner(System.in);
+            int t = s.nextInt();
+        
+         while(t-->0)
+         {
+             //System.out.println(t+"<--");
+             int l = s.nextInt();
+             String str = "";
+             do 
+             {
+                 str = s.nextLine();
+             }while(str.isEmpty());
+
+             //System.out.println("------"+str+"---");
+             if(l==1)
+             {
+                 System.out.println("0");
+             }
+             else
+             {
+                 int count = 0;
+             for(int i =0;i<l-1;i++)
+             {
+                 //System.out.println("in loop");
+                 char ch = str.charAt(i);
+                 char ch1 = str.charAt(i+1);
+                 if((ch!='a' && ch!='e'&&ch!='i' && ch!='o' && ch!='u'))
+                  {                     
+                   if (ch1=='a'|| ch1=='e'||ch1=='i'|| ch1=='o'||ch1=='u')
+                            
+                    {
+                    count++;
+                    }
+                  }
+             }
+             System.out.println(count);
+             }
+         }
+      }catch(Exception e){}
+
+    }
+
+    // public static boolean isVowel(char ch)
+    // {
+    //     boolean vowel = (ch == 'a');
+    //     vowel = vowel || (ch == 'e');
+    //     vowel = vowel || (ch == 'i');
+    //     vowel = vowel || (ch == 'o');
+    //     vowel = vowel || (ch == 'u'); 
+    //     return vowel;
+        //  String v = {'a','e','i','o','u'};
+         
+        //  for(int i =0;i<len;i++)
+        //  {
+        //      for(int j=0;j<6;j++)
+        //      {
+        //          if(v[j]==ch)
+        //          {
+        //              return true;
+        //          }
+        //      }
+        //  }
+        //  return false;    
+//}
+}
