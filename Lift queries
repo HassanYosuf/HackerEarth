@@ -1,0 +1,36 @@
+/*Link to the problem
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/lift-queries/description/*/
+import java.util.*;
+import java.lang.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        
+        // Write your code here
+        try
+        {
+            Scanner s = new Scanner(System.in);
+            int t = s.nextInt();
+             int a=0,b=7,p,q;
+            while(t-->0)
+            {
+                int n = s.nextInt();
+    
+                p=Math.abs(a-n);
+                q=Math.abs(b-n);
+
+                if(p<=q)
+                {
+                    System.out.println("A");
+                    a=n;
+                }
+                else
+                {
+                    System.out.println("B");
+                    b=n;
+                }
+            }
+
+        }catch(Exception e){}
+
+    }
+}
