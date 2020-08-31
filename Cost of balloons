@@ -1,0 +1,57 @@
+/*Link to the problem
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/mojtaba-prepares-contest-29b2a044/*/
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        try{
+            Scanner sc  = new Scanner(System.in);
+        int t= sc.nextInt();
+
+        while(t-->0)
+        {
+            int p1=0,p2=0,n=0,high_cost=0,low_cost=0;
+             p1 = sc.nextInt();
+             p2 = sc.nextInt();
+            
+            if(p1>p2)
+            {
+                high_cost=p1;
+                low_cost=p2;
+            }
+            else
+            {
+                high_cost=p2;
+                low_cost=p1;
+            }
+             n = sc.nextInt();
+             
+            int cost = 0,b=0,count1=0,count2=0;
+            for(int i = 1;i<=n;i++)
+            {
+                for(int j = 1;j<=2;j++)
+                {
+                    b = sc.nextInt();
+                    if(j==1)
+                    {count1=count1+b;}
+                    if(j==2)
+                    {count2=count2+b;}
+                }
+            }
+            if(count1>count2)
+            {
+                cost=(count1*low_cost)+(count2*high_cost);
+                System.out.println(cost);
+            }
+            else
+            {
+                cost=(count2*low_cost)+(count1*high_cost);
+                System.out.println(cost);
+            }
+            
+        }        
+
+        }catch(Exception e){}
+
+    }
+}
