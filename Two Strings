@@ -1,0 +1,56 @@
+/*Link to the Problem
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/two-strings-4/description/*/
+import java.util.*;
+import java.lang.*; 
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        
+        // Write your code here
+        Scanner sc = new Scanner(System.in);
+
+        try{
+            int T = sc.nextInt();
+            while(T>0)
+            {
+                    String s1=sc.next();
+                    String s2=sc.next();
+            
+                    int[] freq = new int[26];
+                  
+                  
+                    for(int i=0;i<26;i++)
+                    {
+                        freq[i]=0;
+                    }
+
+                    for(int i=0;i<s1.length();i++)
+                    {
+                    freq[((int)s1.charAt(i))-97]++;
+                    freq[((int)s2.charAt(i))-97]--;
+                    // System.out.println("**********");
+                    }
+
+                    boolean flag = true;
+                    for(int i=0;i<26;i++)
+                    {
+                    
+                        if(freq[i]!=0)
+                        {
+                            flag=false;
+                            break;
+                        }
+                    }
+                    if(flag==true)
+                    System.out.println("YES");
+                    else
+                    System.out.println("NO");
+
+                T--;
+            } 
+        }catch(Exception e){}
+
+
+
+    }
+}
