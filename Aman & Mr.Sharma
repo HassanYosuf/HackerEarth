@@ -1,0 +1,24 @@
+//link to the Problem- https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/aman-mrsharma/description/
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        
+        // Write your code here
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        int toffee = 0;
+        while(t-- > 0)
+        {
+            int r = s.nextInt();
+            int h = s.nextInt();
+
+            if(100*h>=2*(22.0/7)*r)
+            toffee++;
+            
+
+        }
+        System.out.println(toffee);
+
+
+    }
+}
